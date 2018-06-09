@@ -1,0 +1,152 @@
+html,body {
+	padding: 0;
+	margin: 0;
+}
+header {
+	width:100%;
+}
+.Logo {
+	background: black;
+	color:#FFF;
+	
+
+}
+
+.Logoflex {
+
+	height: 60px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.linkhref {
+	align-self: flex-start;
+}
+
+.Logo a{
+	color:#FFF;
+}
+.container {
+	width: 960px;
+	margin:0 auto;
+
+}
+
+
+.banner {
+
+	background: green;
+}
+
+.rownum {
+	height: 200px;	
+	display: flex;
+	justify-content: flex-end;
+	
+}
+
+.banner ul{
+	display: flex;
+	flex-direction: row-reverse;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.banner ul li {
+	border: 1px solid black;
+	width:15px;
+	text-align: center;
+	background: #FFF;
+	align-self:flex-end;
+}
+
+.actived {
+	line-height: 40px;
+	height:40px;
+}
+
+.navigation {
+	border-bottom: 1px solid grey;
+	height: 70px;
+	position: relative;
+}
+
+.navigation ul {
+	position: absolute;
+	bottom: 0;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+
+}
+
+.navigation ul li {
+	border: 1px solid black;
+	line-height: 50px;
+	text-align: center;
+	height: 50px;
+	border-radius: 10px 10px 0 0;
+	width: 100px;
+	align-self:flex-end;
+}
+
+.navbac {
+	background: grey;
+}
+
+.row {
+	display: flex;
+	flex-direction:row;
+	justify-content: space-around;
+	margin:5px 0 5px;
+
+}
+
+.c1 {
+	border: 1px solid black;
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+	width:38%;
+
+}
+
+.c3 {
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	height: 100px;
+	line-height: 100px;
+	width:20%;
+}
+
+.c4 {
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	height: 100px;
+	line-height: 100px;
+	width:23.5%;
+}
+
+.c5 {
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	height: 100px;
+	line-height: 100px;
+	width:32%;
+}
+
+footer {
+	height: 50px;
+	background: grey;
+	line-height: 50px;
+	text-align: center;
+}
+
