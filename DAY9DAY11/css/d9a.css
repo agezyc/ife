@@ -1,0 +1,191 @@
+.picstudent {
+	position: relative;
+}
+
+
+.studentintro {
+	padding-bottom: 50px;
+	border-bottom: 1px solid grey;
+}
+
+.maskstudent {
+	position: absolute;
+	width:470px;
+	height: 340px;
+	background: black;
+	opacity: 0.5;
+	color:white;
+}
+
+.studentin {
+	position: absolute;
+	width:470px;
+	height: 340px;
+	text-align: center;
+	color:white;
+	z-index: 1;
+	top:10%;
+}
+
+.fontface {
+
+}
+
+.studentin p {
+	color:#FFF;
+	margin-bottom: 30px;
+}
+
+@font-face {font-family: 'iconfont';
+    src: url('../fontface/iconfont.eot'); /* IE9*/
+    src: url('../fontface/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fontface/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../fontface/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fontface/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:80px;font-style:normal;
+    -webkit-font-smoothing: antialiased;/*字体清除锯齿效果*/
+    -webkit-text-stroke-width: 0.2px;/*文本外边框大小*/
+    -moz-osx-font-smoothing: grayscale;}
+
+
+.telform {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 558px;
+	width: 470px;
+	border: 1px solid #c6c7c8;
+	border-radius: 5px;
+
+}
+
+.telform input {
+	width:367px;
+	height: 47px;
+	margin:20px 0 20px 0;
+	padding-left:10px;
+}
+
+.telform button {
+	width:367px;
+	height: 47px;
+	background: black;
+	color: white;
+}
+
+#txtarea {
+	height: 200px;
+	padding-left:10px;
+
+}
+.texlpos1 {
+ 	display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: space-between;
+	
+}
+
+.telintro {
+	width:353px;
+
+
+
+}
+
+.telintro h1 {
+	text-align: left;
+}
+
+.telintro p {
+	font-size: 14px;
+	color:grey;
+}
+
+.tel1 {
+	border:1px solid black;
+	height: 100px;
+	
+}
+
+.ifontpos {
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.ifontsize {
+	font-size: 30px;
+}
+
+.ifontsize2 {
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+
+.linkform {
+	padding-bottom: 50px;
+	border-bottom: 1px solid grey;
+}
+
+.tel2 {
+	
+	border:1px solid black;
+	height: 100px;
+
+}
+input#txtarea::-webkit-input-placeholder{ /*WebKit browsers*/
+
+
+
+
+}
+
+input#txtarea::-moz-input-placeholder{ /*Mozilla Firefox*/
+
+
+
+}
+
+input#txtarea::-ms-input-placeholder{ /*Internet Explorer*/ 
+
+
+
+}
+
+
+footer {
+	background: black;
+}
+.footcontainer {
+	width:1170px;
+	margin:0 auto;
+}
+
+.footflex {
+	
+	height: 437px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footflex ul {
+	list-style: none;
+	
+}
+#foottitle {
+	font-weight: 700;
+	color:white;
+}
+.footflex li {
+	margin-top:30px;
+	color: grey;
+}

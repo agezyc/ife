@@ -1,0 +1,135 @@
+html,body{
+	padding: 0;
+	margin:0;
+}
+
+.leftcontent {
+	width:30%;
+	height: 1000px;
+	background: blue;
+}
+
+.rightcontent {
+	width:70%;
+	height: 1000px;
+	background: red;
+}
+
+.middlebox{
+	margin-left:300px;
+	
+}
+
+.middlebox2{
+	margin-left:800px;
+	
+}
+.clx {
+	overflow: hidden;
+
+}
+.clboth{
+	clear:both;
+}
+
+.leftfix {
+	width:300px;
+	background: blue;
+
+}
+.rightposfix {
+	background: red;
+	flex 1 1 auto;
+
+}
+
+
+
+
+.rightfix {
+
+	background: red;
+	
+	overflow: auto;
+
+}
+.pos1 {
+	position: absolute;
+}
+
+.flcontent {
+	width:100%;
+	float:left;
+	margin-left:-500px;
+}
+
+.position37{
+	position: relative;
+}
+
+.ml500 {
+	left: 500px;
+}
+
+.mr5001 {
+	margin-left: 300px;
+}
+
+.rightfixfix {
+	width:500px;
+	background: blue;
+	height: 300px;
+}
+
+.leftfixfix {
+	background: red;
+	
+}
+
+.f0{
+	flex:0 300px;
+}
+
+.f1{
+	flex:0 500px;
+}
+
+.rf1{
+	flex:1;
+}
+
+
+.mainbox{
+	display: flex;
+}
+
+.ml {
+	position: absolute;
+	top:0;
+	width:100%;
+	min-height: 100%;
+	
+
+}
+.mr500{
+	position: absolute;
+	top:0;
+	right:0;
+
+}
+
+.mr {
+	position: absolute;
+	top:0;
+	margin-left: 30%;
+}
+
+
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+
+
