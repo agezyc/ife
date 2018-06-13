@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>flex 嵌套 之 高度自适应</title>
+  <style media="screen">
+    body, html {
+        height: 90%;
+    }
+    .flex {
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+    }
+    .item {
+        flex: auto;
+    }
+    .overflow {
+        overflow: auto;
+    }
+    .outer {
+        height: 70%;
+        border: 1px solid silver;
+    }
+    .contener {
+        background: pink;
+        border: 1px solid silver;
+    }
+    .contener>div{
+        padding: 5px;
+    }
+
+
+    
+  </style>
+</head>
+
+<body>
+  <h1>flex 嵌套布局</h1>
+<div class="flex outer">
+  <div class= "overflow" style="width:100%; background-color: silver; padding: 10px;">外容器 自sdfsfdsfs适应内容的区域 ... ..sdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffsdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffsdffffffffffff.</div>
+  <div class="flex item overflow" style="padding: 15px;"> <!-- 嵌套的item加flex样式 及 overflow: auto属性 -->
+    <div class="flex contener overflow">                  <!-- overflow: auto 高度自适应必须 -->
+      <div style="background-color: yellow;">
+        <h3>内容器 - 头部信息</h3>
+      </div>
+      <div class="item overflow">                         <!-- overflow: auto 高度自适应必须 -->
+        内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>
+          内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>
+            内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>内容溢出滚动部分 <br>
+      </div>
+      <div style="background-color: yellow;">
+        <h3>内容器 - 尾部信息</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
