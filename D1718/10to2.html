@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+    <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
+    <button id="trans-btn">转化为二进制</button>
+    <p id="result">运算结果</p>
+    <script>
+
+function dec2bin(decNumber) {
+    // 在这里实现你的转化方法，注意需要判断输入必须为一个非负整数
+    if(decNumber >0 && decNumber%1 === 0){
+        var total= "";
+        var two = decNumber;
+        
+        while (two != 0) {
+        two = parseInt(decNumber/2);
+        dot = decNumber%2;
+        total += dot;
+        decNumber = two;
+        if(two == 1) {
+            total += two;
+            break;
+        }
+        }
+        // var stack = [];//生成一个栈，从尾部添加数据进数组，然后用join连接
+        // for(var len = total.length,i=len;i>=0;i-- ){
+        //     stack.push(total[i]);
+        //     }
+        // return stack.join('');
+        
+        // 第二种方法，不用join，采用直接+=数组
+        var stack ="";
+        var len = total.length;
+        for(var i=len;i>=0;i--)
+        {
+            stack += total.charAt(i);
+        }
+        return stack;
+}
+}
+
+
+// 实现党点击转化按钮时，将输入的十进制数字转化为二进制，并显示在result的p标签内
+// Some coding
+
+document.getElementById("trans-btn").onclick = function () {
+    var keynum = document.getElementById("bin-bit").value;
+    var f = document.getElementById("dec-number").value;
+    stack = dec2bin(f);
+    if(keynum == stack.length) {
+        document.getElementById("result").innerHTML = dec2bin(f);
+    }
+    else if(keynum < stack.length) {
+        document.getElementById("result").innerHTML = dec2bin(f);
+        console.log("bit小于总位数");
+    }
+    else {
+        var line =[];
+        len = keynum;
+        i = len - stack.length;
+        i = Math.abs(i);
+        for(;i>0;i--)
+        {
+            stack = "0" +stack;
+        }
+        document.getElementById("result").innerHTML = stack;
+    }
+
+
+}
+
+    </script>
+</body>
+</html>

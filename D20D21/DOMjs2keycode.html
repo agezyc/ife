@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="name" type="text">    
+    <button id="submit-btn" onclick="changetext()">Submit</button>
+    
+    <script>
+    // function fun1(){
+    //     document.onkeydown = function(){
+    //     var oEvent = window.event;    
+    //     var x=document.getElementById("name");
+    //     if(oEvent.keyCode == 27) {
+    //         x.innerHTML = "";
+    //         alert("ff");
+    //     }
+    //     };
+    // };
+    document.onkeydown = function(e){
+        var keyNum = window.event ? e.keyCode : e.which;
+        if (keyNum == 27){
+            document.getElementById("name").value = " ";
+        }
+        if (keyNum == 13) {
+            changetext();
+        }
+    }
+
+
+    function changetext(){
+        var i = document.getElementById("name");
+        console.log(i.value);
+    }
+
+
+    </script>
+</body>
+</html>

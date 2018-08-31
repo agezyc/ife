@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <style>
+        select {
+            display: none;
+        }
+        .obj {
+            display: block;
+            background: blue;
+        }
+    </style>
+</head>
+<body>            
+    <label>
+        <input id="school" name="status" type="radio">
+        School
+    </label>
+    <label>
+        <input id="company" name="status" type="radio">
+        Company
+    </label>
+
+    <select id="school-select">        
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select">        
+        <option>百度</option>
+        <option>爱奇艺</option>        
+    </select>
+    <script type="text/javascript">
+    //     window.onload=function(){
+    //         var school = document.getElementById("school");
+    //         var company = document.getElementById("company");
+    //         for
+    // }
+    var school = document.getElementById("school");
+    school.onclick= function(){
+        var sel = document.getElementById("school-select");
+        var com = document.getElementById("company-select");
+        sel.className = '#obj';
+        com.style.display = "none";
+    }
+    var company = document.getElementById("company");
+    company.onclick= function(){
+    var sel = document.getElementById("school-select");
+    var com = document.getElementById("company-select");
+    sel.style.cssText = "display:none";
+    com.style.cssText = "display:block; background:red;";
+}
+
+    </script>
+</body>
+</html>

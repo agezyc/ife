@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript判断是否数字</title>
+</head>
+<body>        
+    <input id="first-number"  value="0" placeholder="第一个数字">
+    <input id="second-number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+       
+        document.getElementById("add-btn").onclick = function() {
+            fnum = Number(document.getElementById("first-number").value);
+            snum = Number(document.getElementById("second-number").value);
+            if (isNaN(fnum) == false && isNaN(snum) == false) {
+               document.getElementById("result").innerHTML = fnum + snum;
+               }
+               else
+               {
+                console.log("输入不是数字");
+                
+               }
+            }
+        document.getElementById("minus-btn").onclick = function() {
+            fnum = + document.getElementById("first-number").value;
+            snum = + document.getElementById("second-number").value;
+            if (isNaN(fnum) == false && isNaN(snum) == false) {
+               document.getElementById("result").innerHTML = fnum - snum;
+               }
+               else
+               {
+                console.log("输入不是数字");
+               }
+        }
+        document.getElementById("times-btn").onclick = function() {
+            fnum = + document.getElementById("first-number").value;
+            snum = + document.getElementById("second-number").value;
+            if (isNaN(fnum) == false && isNaN(snum) == false) {
+               document.getElementById("result").innerHTML = fnum * snum;
+               }
+               else
+               {
+                console.log("输入不是数字");
+               }
+        }
+        document.getElementById("divide-btn").onclick = function() {
+            fnum = + document.getElementById("first-number").value;
+            snum = + document.getElementById("second-number").value;
+            if (isNaN(fnum) == false && isNaN(snum) == false) {
+                if (snum == 0) {
+                    alert ("除数为0");
+                }
+                else {
+                document.getElementById("result").innerHTML = fnum / snum;
+               }
+            }
+               else
+               {
+                alert("不是数字");
+               }
+            
+        }
+        
+    </script>
+</body>
+</html>

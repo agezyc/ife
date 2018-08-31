@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+<script type="text/javascript" id="headerpagebeginjs-4200358_29314">try {window.external.pagestate(window, "window.pagebegin");var jsPageBeginNode = document.getElementById("headerpagebeginjs-4200358_29314");if (jsPageBeginNode){jsPageBeginNode.parentNode.removeChild(jsPageBeginNode);}} catch(e) {}</script>
+<script type="text/javascript" id="headerjs-4200358_29314" sogou-script="true" src="https://BCC0E825-2420-4190-AF25-ABD45D41EA3A/se/extheadercontentscript/?sbid=headerjs-4200358_29314&isTopFrame=false&url=https%3A%2F%2Fmail.qq.com%2Fcgi-bin%2Fframe_html%3Fsid%3DWasIUFF6ygtUbWw3%26r%3D51c9ea5fbb6ae220dc5252b318a17c3c" charset="UTF-8"></script>
+<link rel="stylesheet" id="headercss-4200358_29314" type="text/css" href="https://BCC0E825-2420-4190-AF25-ABD45D41EA3A/se/extcontentcss/?sbid=headercss-4200358_29314&isTopFrame=false&url=https%3A%2F%2Fmail.qq.com%2Fcgi-bin%2Fframe_html%3Fsid%3DWasIUFF6ygtUbWw3%26r%3D51c9ea5fbb6ae220dc5252b318a17c3c" charset="UTF-8"></link>
+<script type="text/javascript" id="headercssdeljs-4200358_29314">var jsCSSNode = document.getElementById("headercss-4200358_29314");if (jsCSSNode){jsCSSNode.parentNode.removeChild(jsCSSNode);}var jsSelfNode = document.getElementById("headercssdeljs-4200358_29314");if (jsSelfNode){jsSelfNode.parentNode.removeChild(jsSelfNode);}</script>
+</head>
+<body>        
+    <div id="wrapper">
+        <div id="news-top" class="section">
+            <h3>Some title</h3>
+            <div class="content">
+                <ul>
+                    <li><span>HTML</span><a href="">Some Link1</a></li>
+                    <li><span>JS</span><a class="active" href="">Some Link2</a></li>
+                    <li><span>CSS</span><a href="">Some Link3</a></li>
+                    <li><span>JS</span><a href="">Some Link4</a></li>
+                    
+                </ul>
+            </div>
+            <!-- <img src=""> -->
+            <p class="">Some Text</p>
+        </div>
+        <div id="news-normal" class="section">
+            <h3>Some title</h3>
+            <div class="content">
+                <ul>
+                    <li><span>HTML</span><a href="">Some Link1</a></li>
+                    <li><span>HTML</span><a href="">Some Link2</a></li>
+                    <li><span>JS</span><a class="active" href="#">Some Link3</a></li>
+                    <li><span>CSS</span><a href="">Some Link4</a></li>
+                </ul>
+            </div>
+            <!-- <img src=""> -->
+            <p class="">Some Text</p>
+        </div>      
+    </div>
+    <script>
+    console.log(getAllListItem());
+    console.log(getAllListItem2());
+    console.log(findAllHtmlSpanInOneSection('news-normal'));
+    console.log(findAllHtmlSpanInOneSection2('news-normal'));
+    console.log(findListItem('news-top','JS'));
+    console.log(findListItem2('news-top','JS'));
+    console.log(getActiveLinkContent('news-normal'))
+    console.log(getActiveLinkContent2('news-normal'));
+    function getAllListItem() {
+        // 返回页面中所有li标签
+        var link = document.getElementsByTagName('li');
+        return link;
+    }
+    function getAllListItem2() {
+        // 返回页面中所有li标签
+        var link = document.querySelectorAll('li');
+        return link;
+    }
+    function findAllHtmlSpanInOneSection(sectionId) {
+        // 返回某个section下所有span中内容为HTML的span标签
+        var sec = document.getElementById(sectionId);
+        var ht = sec.getElementsByTagName('span');
+        var f=[];
+        for(var i=0; i <ht.length; i++) {
+            if(ht[i].innerHTML =="HTML") {
+                f.push(ht[i]);
+            }
+        }
+        return f;
+        
+    }
+    function findAllHtmlSpanInOneSection2(sectionId) {
+        var sec = document.getElementById(sectionId);
+        var ht = sec.querySelectorAll('span');
+        var f=[];
+        for(var i=0; i <ht.length; i++) {
+            if(ht[i].innerHTML =="HTML") {
+                f.push(ht[i]);
+            }
+        }
+        return f;
+    }
+
+    function findListItem(sectionId, spanCont) {
+        // 返回某个section下，所有所包含span内容为spanCont的LI标签
+        var sec = document.getElementById(sectionId);
+        var ht = sec.getElementsByTagName('span');
+        var f=[];
+        for(var i=0; i <ht.length; i++) {
+            if(ht[i].innerHTML == spanCont) {
+                f.push(ht[i].parentNode);
+            }
+        }
+        return f;
+    }
+function findListItem2(sectionId, spanCont) {
+        // 返回某个section下，所有所包含span内容为spanCont的LI标签
+        var sec = document.getElementById(sectionId);
+        var ht = sec.querySelectorAll('li span');
+        var f=[];
+        for(var i=0; i <ht.length; i++) {
+            if(ht[i].innerHTML == spanCont) {
+                f.push(ht[i].parentNode);
+            }
+        }
+        return f;
+    }
+
+    function getActiveLinkContent(sectionId) {
+        // 返回某个section下，class为active的链接中包含的文字内容
+        var sec = document.getElementById(sectionId);
+        var ht = sec.getElementsByTagName('a');
+        var agg=[];
+        for(var i=0;i<ht.length;i++)
+        {
+            if(ht[i].className =='active')
+            {
+                agg.push(ht[i]);
+            }
+        }
+        var agg2=[];
+        for(var j=0; j<agg.length;j++)
+        {
+            agg2.push(agg[j].innerHTML);
+        }
+        return agg2;
+
+    }
+
+    function getActiveLinkContent2(sectionId) {
+        // 返回某个section下，class为active的链接中包含的文字内容
+        var sec = document.querySelector(sectionId);
+        var ht = sec.querySelector('a.active');
+        var agg=[];
+        return ht.innerHTML;
+
+    }
+
+
+    </script>
+</body>
+</html><script type="text/javascript" id="tailjs-4200358_29314" sogou-script="true" src="https://BCC0E825-2420-4190-AF25-ABD45D41EA3A/se/exttailcontentscript/?sbid=tailjs-4200358_29314&isTopFrame=false&url=https%3A%2F%2Fmail.qq.com%2Fcgi-bin%2Fframe_html%3Fsid%3DWasIUFF6ygtUbWw3%26r%3D51c9ea5fbb6ae220dc5252b318a17c3c" charset="UTF-8"></script>
+<script type="text/javascript" id="tailpageendjs-4200358_29314">try {window.external.pagestate(window, "window.pageend");var jsPageEndNode = document.getElementById("tailpageendjs-4200358_29314");if (jsPageEndNode){jsPageEndNode.parentNode.removeChild(jsPageEndNode);}} catch(e) {}</script>

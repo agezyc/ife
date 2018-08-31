@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.smail2 {
+			background: url(erik_ce204002.jpg) no-repeat;
+			background-position:0px 0px;
+			width:480px;
+			height: 480px;
+		}
+	</style>
+</head>
+<body>
+	<div id="smail" class="smail2">
+	</div>
+
+<script type="text/javascript">
+	// var sprit = document.querySelector("div");
+	// console.log(sprit.style);
+	// var speed=0;
+	// function scroll() {
+	// 	speed += -480;
+	// 	sprit.style.backgroundPosition = "0px " + speed + "px";
+	// 	if(speed == 3960) {
+	// 		speed =0;
+	// 	}
+	// }
+	// function start(){
+	// 	setInterval(scroll,100);
+	// }
+	// window.onload=function(){
+	// 	start();
+	// }
+	// 第一种方法，直接减像素值设定，注意0px后加 空格，读取CSS 两种办法document.getElementById.style ,document.querySelector 加上.css,不能直接选择id,querySelector,需要document.querySelector("#test"); document.querySelectorAll("#test")[0]; repeat-y 加上后不会超出最大值，所以speed变成再大的数字也可以运行
+ 
+	// 第二种方法，使用数组提前将坐标放进数组。然后遍历
+	window.onload=function(){
+
+	var sprit = document.getElementById("smail");
+	var img ='erik_ce204002.jpg';
+	console.log(sprit.style);
+	var pos = ['0 -480', '0 -960' ,'0 -1440' ,'0 -1920','0 -2400','0 -2880','0 -3360' ,'0 -3840','0 -4320',];
+	var index=0;
+	
+	function scroll(){
+		position = pos[index].split(' ');
+		sprit.style.backgroundPosition = position[0] + 'px ' + position[1] + 'px';
+		console.log(sprit.style.backgroundPosistion);
+		index++;
+		if(index >= pos.length) {
+			index =0;
+		}
+		
+	}
+	setInterval(scroll,100);
+
+}
+
+</script>
+</body>
+</html>

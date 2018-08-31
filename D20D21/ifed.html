@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>            
+<div id="fade-obj" style="width:300px;height:300px;background:#000"></div>
+<button id="fade-btn">淡出</button>
+<script type="text/javascript"></script>
+</body>
+<script type="text/javascript">
+function fadeIn(){
+            /*
+            * 参数说明
+            * element==>需要淡入的元素
+            * speed==>淡入速度,正整数(可选)
+            */
+        
+        var alpha = 100;
+        function show() {
+            alpha-=10;
+            var iDIV = document.getElementById('fade-obj');
+            iDIV.style.opacity = alpha /100;
+        }
+        var btn = document.getElementById("fade-btn");
+        var flag =setInterval(show,1000);
+        btn.onclick()=function(){
+            clearInterval(flag);
+        }
+
+}
+fadeIn(1000);
+function fadeOut(element,speed){
+
+}
+
+</script>
+</html>
